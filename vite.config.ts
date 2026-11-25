@@ -1,3 +1,4 @@
+
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import fs from 'fs';
@@ -6,10 +7,11 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/neuron/',
+
     plugins: [
       react(),
       tailwindcss(),
-      // Copies src/assets into dist/ so root-relative asset URLs resolve cleanly in production builds.
       {
         name: 'copy-unbundled-src-assets',
         apply: 'build',
@@ -36,7 +38,6 @@ export default defineConfig(() => {
       include: ['react', 'react-dom', 'react-dom/client', 'motion/react', 'lucide-react'],
     },
     server: {
-      // Optional watch/HMR override via DISABLE_HMR env var.
       hmr: process.env.DISABLE_HMR !== 'true',
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
