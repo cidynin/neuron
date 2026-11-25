@@ -1,0 +1,6 @@
+{
+  "name": "neuron",
+  "description": "Ultra-minimalist, distraction-free jotting and notepad workspace with tactile typing sounds, customizable OS typography, and curated color palettes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
